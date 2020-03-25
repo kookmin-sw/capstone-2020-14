@@ -74,7 +74,7 @@
 <center><img src="./assets/myunghaklee.jpeg" width="20%" height="20%" style="border-radius:50%"/></center>
 
 ```
-할할이름: 이명학
+이름: 이명학
 역할
 ```
 
@@ -88,7 +88,7 @@
 <center><img src="./assets/juga_v2.png" width="20%" height="20%" style="border-radius:50%;"/></center>
 
 ```
-할할이름: 주가
+이름: 주가
 역할
 ```
 
