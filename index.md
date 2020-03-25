@@ -52,7 +52,8 @@
 
 ```
 이름: 박은환
-역할:
+역할: YOLO 신경망 및 관련 연구
+이메일: judepark@kookmin.ac.kr
 ```
 
 
@@ -61,35 +62,40 @@
 
 ```
 이름: 이로제
-역할:
+역할: 적외선 카메라와 tx 2 보드 연결 및 입력 데이터 관리
+이메일: bluevin@kookmin.ac.kr
 ```
 
 <center><img src="./assets/jaebinlee.jpg" width="20%" height="20%" style="border-radius:50%"/></center>
 
 ```
 이름: 이재빈
-역할: 
+역할: 웹 서버와 tx board 연결하는 네트워크 구축
+이메일: jaebinlee96@kookmin.ac.kr
 ```
 
 <center><img src="./assets/myunghaklee.jpeg" width="20%" height="20%" style="border-radius:50%"/></center>
 
 ```
 이름: 이명학
-역할
+역할: YOLO 신경망 및 관련 연구
+이메일: mh9716@kookmin.ac.kr
 ```
 
 <center><img src="./assets/jinwoojung.jpg" width="20%" height="20%" style="border-radius:50%"/></center>
 
 ```
 이름: 정진우
-역할: 
+역할: 웹 서버와 tx board 연결하는 네트워크 구축
+이메일: jtc5311@kookmin.ac.kr
 ```
 
 <center><img src="./assets/juga_v2.png" width="20%" height="20%" style="border-radius:50%;"/></center>
 
 ```
 이름: 주가
-역할
+역할: 웹 서버와 tx board 연결하는 네트워크 구축
+이메일: jtc5311@kookmin.ac.kr
 ```
 
 
