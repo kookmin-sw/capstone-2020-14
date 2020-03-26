@@ -14,35 +14,35 @@
 
 사람들의 불안 심리를 안정시키고 범죄들을 예방하기 위하여 심층학습(deep learning)을 통해 학습한 객체 탐지 기술을 안전귀가 서비스에 적용할 것이다. 위의 문제에서 나타나듯 사람들이 불안해하는 어두운 환경에서도 객체 탐지가 가능하기위해서 일반 가시광선 카메라가 아닌 적외선 카메라를 이용한 객체 탐지 기술을 개발해볼 것이다.
 
-![img](https://lh5.googleusercontent.com/PxgxZAw_es4N_qYYl33ikDGhqoM4JpVp94-CEH5guhY12zJTKgr_by0oOom5j5gzcdIlHh5ed6RU4tY50iiwNfs61b3EDkaAWuEiyjUAhZEf8ajGLirQi2uRPp5rBIsQ_398pI4)
+<center><img src="https://lh5.googleusercontent.com/PxgxZAw_es4N_qYYl33ikDGhqoM4JpVp94-CEH5guhY12zJTKgr_by0oOom5j5gzcdIlHh5ed6RU4tY50iiwNfs61b3EDkaAWuEiyjUAhZEf8ajGLirQi2uRPp5rBIsQ_398pI4"/></center>
 
 <center>그림 1. 국가와 성별에 따른 불안 비율</center>
 
+</br>
 
 
-![img](https://lh4.googleusercontent.com/Zg_KM3Esspx03f3391ul2ihiYki1z6tiVufBbUoFji7zTzHVeW4ybkOnLtWtU_xJh75XQOEnHOSSaAkDx32eQqU26JOKUwOEdbVtVI_YaqmXFBJ14LUtjvmXGJdlWOnV5jcpKMA)
+
+<center><img src="https://lh4.googleusercontent.com/Zg_KM3Esspx03f3391ul2ihiYki1z6tiVufBbUoFji7zTzHVeW4ybkOnLtWtU_xJh75XQOEnHOSSaAkDx32eQqU26JOKUwOEdbVtVI_YaqmXFBJ14LUtjvmXGJdlWOnV5jcpKMA"/></center>
 
 <center>그림 2. 시간대별 범죄 발생 비율</center>
 
-
-
-
+</br>
 
 ### 1.2.1. 기술 발전 현황
 
 일반 가시광선 카메라를 이용한 객체 탐지 기술은 [그림 3]에서 나타나듯 많이 발전해왔다. 객체 탐지 기술은 [그림 4]와 같이 특정 사진이 주어지면 그 사진안의 객체들을 탐지하는 기술이다.
 
-**![img](https://lh5.googleusercontent.com/MHJNN20hmhxOJtUJBGEKioBI5K_IM1V1glFrs62T836EMbk4OjnfCSu2YT3nD61M3MkXGa-hP8TqmhIT_nmffBJAVUD4yEYh4Q_4QatMNeD3c_dyR_Cpy_wMa4QNFSL5HiFWX4w)**
+<center><img src="https://lh5.googleusercontent.com/MHJNN20hmhxOJtUJBGEKioBI5K_IM1V1glFrs62T836EMbk4OjnfCSu2YT3nD61M3MkXGa-hP8TqmhIT_nmffBJAVUD4yEYh4Q_4QatMNeD3c_dyR_Cpy_wMa4QNFSL5HiFWX4w"/></center>
 
 <center>그림 3. 객체 탐지 모델 계보</center>
 
+</br>
 
-
-![](./assets/object-detection-example.png)
+<center><img src="./assets/object-detection-example.png"/></center>
 
 <center>그림 4. 객체 탐지 예시</center>
 
-
+</br>
 
 ### 1.2.2. 기존 기술의 문제점 및 해결 방안
 
@@ -56,11 +56,11 @@
 
 첫 번째 문제점을 해결하기 위하여 가시 광선을 이용한 카메라를 사용하지 않고 적외선을 이용한 카메라를 이용할 것이며 두 번째 문제를 해결하기 위해서는 자동으로 객체를 탐지해주는 객체 탐지 모델을 적용할 것이다. 적외선 카메라는 빛의 유무가 객체의 탐지 성능에 영향을 주지 않고 또한 악천후에도 가시광선 카메라에 비하여 성능이 좋다. 적외선 카메라를 이용한 객체 탐지의 예시를 들면 다음과 같다.
 
-![image-20200326144746570](./assets/thermal-object-detection.png)
+<center><img src="./assets/thermal-object-detection.png"/></center>
 
 <center>그림 5. 적외선 이미지 객체 탐지</center>
 
-
+</br>
 
 하지만 적외선 카메라는 범죄가 발생했을 때 그 범죄자의 얼굴을 제대로 잡지 못하는 문제가 있다. 따라서 평소에는 적외선 카메라를 통하여 촬영을 하고 객체 탐지 결과 수상한 행동을 하는 경우(오랜 시간 동안 한 자리에서 움직이지 않는 등의)만 일반 가시광선을 이용하여 촬영을 하는데 이 때 플래시 등을 이용하여 촬영을 하도록 한다면 어느 정도의 신원 파악은 가능할 것이다. 또한 이렇게 이벤트가 발생한 부분만 저장을 한다면 위에서 문제점으로 제시하였던 CCTV의 용량관련 문제도 해결할 수 있을 것으로 예측된다.
 
