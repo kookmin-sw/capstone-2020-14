@@ -1,4 +1,4 @@
-## 언제 어디서든 안심귀가
+# 언제 어디서든 안심귀가
 
 팀페이지 주소: https://kookmin-sw.github.io/capstone-2020-14/
 
@@ -132,7 +132,9 @@ The key contributions of this project follows as:
 
 ## 4. 소개 영상
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P-1cZE5r2TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video Label](https://i9.ytimg.com/vi/P-1cZE5r2TI/mq2.jpg?sqp=CNng8fMF&rs=AOn4CLA0HjWvs60KtMpUKLzSzGJTDcRqKg)](https://youtu.be/P-1cZE5r2TI)
+
+위의 동영상을 클릭해주세요! :)
 
 ## 5. 결과 영상
 
