@@ -132,13 +132,7 @@ The key contributions of this project follows as:
 
 ## 4. 소개 영상
 
-![](./assets/introduce_video.mp4)
-
-
-
-
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P-1cZE5r2TI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 5. 결과 영상
 
