@@ -18,15 +18,9 @@
 
 <center>그림 1. 국가와 성별에 따른 불안 비율</center>
 
-</br>
-
-
-
 <center><img src="https://lh4.googleusercontent.com/Zg_KM3Esspx03f3391ul2ihiYki1z6tiVufBbUoFji7zTzHVeW4ybkOnLtWtU_xJh75XQOEnHOSSaAkDx32eQqU26JOKUwOEdbVtVI_YaqmXFBJ14LUtjvmXGJdlWOnV5jcpKMA"/></center>
 
 <center>그림 2. 시간대별 범죄 발생 비율</center>
-
-</br>
 
 ### 1.2.1. 기술 발전 현황
 
@@ -36,13 +30,9 @@
 
 <center>그림 3. 객체 탐지 모델 계보</center>
 
-</br>
-
 <center><img src="./assets/object-detection-example.png"/></center>
 
 <center>그림 4. 객체 탐지 예시</center>
-
-</br>
 
 ### 1.2.2. 기존 기술의 문제점 및 해결 방안
 
@@ -59,8 +49,6 @@
 <center><img src="./assets/thermal-object-detection.png"/></center>
 
 <center>그림 5. 적외선 이미지 객체 탐지</center>
-
-</br>
 
 하지만 적외선 카메라는 범죄가 발생했을 때 그 범죄자의 얼굴을 제대로 잡지 못하는 문제가 있다. 따라서 평소에는 적외선 카메라를 통하여 촬영을 하고 객체 탐지 결과 수상한 행동을 하는 경우(오랜 시간 동안 한 자리에서 움직이지 않는 등의)만 일반 가시광선을 이용하여 촬영을 하는데 이 때 플래시 등을 이용하여 촬영을 하도록 한다면 어느 정도의 신원 파악은 가능할 것이다. 또한 이렇게 이벤트가 발생한 부분만 저장을 한다면 위에서 문제점으로 제시하였던 CCTV의 용량관련 문제도 해결할 수 있을 것으로 예측된다.
 
@@ -80,7 +68,7 @@
 
 ```
 이름: 박은환
-역할: YOLO 신경망 및 관련 연구
+역할: YOLO 신경망 관련 연구 및 백엔드 개발
 이메일: judepark@kookmin.ac.kr
 ```
 
@@ -130,14 +118,11 @@
 
 ## 3. Abstract
 
-
-
 ## 4 . 사용법
 
 ## 5. 결과 영상
 
-
-
 ## 6. 참고 문헌
 
-[1]. https://www.yna.co.kr/view/AKR20180830133300797
+[1]. [[디지털스토리] 어둑한 밤길…누군가 나를 따라온다](https://www.yna.co.kr/view/AKR20180830133300797)
+
