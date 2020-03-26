@@ -130,7 +130,15 @@ The key contributions of this project follows as:
 - Building the real product for actual positive effect.
 - All the code of this project will be released when due date.
 
-## 4 . 사용법
+## 4. 소개 영상
+
+![](./assets/introduce_video.mp4)
+
+
+
+
+
+
 
 ## 5. 결과 영상
 
