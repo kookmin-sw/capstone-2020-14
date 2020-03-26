@@ -118,6 +118,18 @@
 
 ## 3. Abstract
 
+Even nowadays, you can still find many articles about crime from various web portal services. According to article, [Figure 1] shows many people in South Korea have anxienty about crime. In addition, according to the report by the Korea Institute for Health and Social Affairs, Woo Sun-hee, a researcher at the Korea Institute for Health and Social Affairs, **"focusing on the comparison of crime anxiety and demographic sociological factors: comparison with European countries"**, Korean women (ages 19-75) feels anxiety more than European women when they were walking alone at night.
+
+Following up the analysis of experts and survey results, people still have a lot of anxiety about crime and [Figure 2] shows the actual proportion of cirmes over time which means it is exposed to.
+
+For the purpose of decreasing people's anxiety and preventing from crimes, object detection technology learned through deep learning will be applied to the service for safety return. As shown in the above problems, for the purpose of being able to detect objects in a late dark night where people feels anxious, we will deveop an object detection technology using an infrared camera rather than normal visible camera.
+
+The key contributions of this project follows as:
+
+- Object detection technology using an infrared camera.
+- Building the real product for actual positive effect.
+- All the code of this project will be released when due date.
+
 ## 4 . 사용법
 
 ## 5. 결과 영상
