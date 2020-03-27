@@ -132,9 +132,11 @@ The key contributions of this project follows as:
 
 ## 4. 소개 영상
 
-[![Video Label](https://i9.ytimg.com/vi/P-1cZE5r2TI/mq2.jpg?sqp=CNng8fMF&rs=AOn4CLA0HjWvs60KtMpUKLzSzGJTDcRqKg)](https://youtu.be/P-1cZE5r2TI)
+[![](https://i9.ytimg.com/vi/06iZmmjt9rY/mq2.jpg?sqp=CPXt9fMF&rs=AOn4CLB2DbKpJjOnjLLGT1tvTZodTZt5Tw)](https://youtu.be/06iZmmjt9rY)
 
-위의 동영상을 클릭해주세요! :)
+위의 동영상을 클릭해주세요! 만약, 위의 영상이 클릭되지 않는다면 아래 링크로 직접 들어가주세요!
+
+https://youtu.be/06iZmmjt9rY
 
 ## 5. 결과 영상
 
