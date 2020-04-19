@@ -139,7 +139,7 @@ The key contributions of this project follows as:
 https://youtu.be/06iZmmjt9rY
 
 ## 5. 결과 영상
-
+![example](https://user-images.githubusercontent.com/12128784/79684000-0b3dd500-8269-11ea-9b48-2940312312ce.gif)
 ## 6. 참고 문헌
 
 [1]. [[디지털스토리] 어둑한 밤길…누군가 나를 따라온다](https://www.yna.co.kr/view/AKR20180830133300797)
