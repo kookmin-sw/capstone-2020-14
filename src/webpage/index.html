@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="reset.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    html,
+    body {}
+
+    .wrap {
+      margin: 0 auto;
+      width: 980px;
+    }
+
+    .container {}
+
+    .header {
+      background-color: red;
+      text-align: center;
+      padding: 40px;
+      cursor: pointer;
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main {}
+
+    /*  */
+    .nav {}
+
+    .nav>ul {
+      list-style: none;
+
+    }
+
+    .nav>ul>li {
+      display: inline-block;
+      width: 32%;
+      padding: none;
+      box-sizing: border-box;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+
+    }
+
+    .nav>ul>li.active {
+      border-top: 4px solid rgba(43, 195, 167, 1);
+      padding: 8px;
+      font-weight: bold;
+      color: rgba(43, 195, 167, 1);
+    }
+
+    /*  */
+    .nav2 {
+      width: 270px;
+      font-size: 11px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+
+    /* theme2 */
+    .nav2>ul>li {
+      display: inline-block;
+      width: 32%;
+      padding: none;
+      box-sizing: border-box;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .nav2>ul>li:not(:nth-of-type(1)) {
+      border-left: 1px solid black;
+    }
+
+    .nav2>ul>li.active {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header" style="" onclick="goHome()">
+      <h2>logo</h2>
+    </div>
+    <div class="title">
+      <h2>적외선 이미지에서..</h2>
+    </div>
+    <!-- <div class="nav">
+      <ul>
+        <li class="active">
+          <div>
+            <a href="page1.html">프로젝트 소개</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="page2.html">동영상</a>
+          </div>
+
+        </li>
+        <li>
+          <div>
+            <a href="page3.html">팀원 소개</a>
+          </div>
+
+        </li>
+      </ul>
+    </div> -->
+    <div class="nav1">
+      <ul>
+        <li class="">
+          <div onclick="go('/page1.html');">
+            프로젝트 소개
+          </div>
+        </li>
+        <li>
+          <div onclick="go('/page2.html');">
+            동영상
+          </div>
+        </li>
+        <!-- <li>
+          <div>
+            <a href="page3.html">웹페이지 활용 방법</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <!-- <div class="nav2">
+      <ul>
+        <li class="active">
+          <div>
+            프로젝트 소개
+          </div>
+        </li>
+        <li>동영상</li>
+        <li>팀원 소개</li>
+      </ul>
+    </div> -->
+    <div style="background-color: blue;">
+
+    </div>
+  </div>
+  <script>
+    function goHome() {
+      location.href = "/";
+    }
+
+    function go(path) {
+      location.href = path;
+    }
+  </script>
+</body>
+
+</html>
