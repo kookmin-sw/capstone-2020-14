@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="reset.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: 0 0 0 0;
+    }
+
+    .wrap {
+      margin: 0 auto;
+      width: 980px;
+      box-sizing: border-box;
+    }
+
+    .container {}
+
+    .header {
+      background-color: red;
+      text-align: center;
+      padding: 40px;
+      cursor: pointer;
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main {
+      padding-top: 80px;
+    }
+
+    .card-header {
+      display: flex;
+
+      justify-content: space-between;
+    }
+    .card-header>div {
+      width: 392px;
+      text-align: left;
+    }
+
+    .card {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* align-content: space-between; */
+    }
+
+    .card:not(:nth-of-type(1)) {
+      margin-top: 20px;
+    }
+
+    .carditem {
+      width: 40%;
+      /* height: 600px; */
+      /* background-color: red; */
+      border: 1px solid gray;
+    }
+
+    .carditem:nth-of-type(1) {}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header" onclick="goHome()">
+      <h2>logo</h2>
+    </div>
+    <div class="title">
+      <h2>적외선 이미지에서..</h2>
+    </div>
+    <div class="nav1">
+      <ul>
+        <li>
+          <div onclick="go('/page1.html');">
+            프로젝트 소개
+          </div>
+        </li>
+        <li class="active">
+          <div onclick="go('/page2.html');">
+            동영상
+          </div>
+        </li>
+        <!-- <li>
+          <div>
+            <a href="page3.html">웹페이지 활용 방법</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <!-- <button style="width: 100%; margin: 15px 0; height: 50px;" onclick="convert();">
+      변환하기
+    </button> -->
+    <div class="main">
+      <div class="card-header">
+        <div>
+          원본 이미지
+        </div>
+        <div style="width: 50px;"></div>
+        <div>
+          심층학습을 적용한 이미지
+        </div>
+      </div>
+      <!-- card-1 -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00001.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" width="100%" src="images/FLIR_video_00001A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00002.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" width="100%" src="images/FLIR_video_00002A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00003.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" width="100%" src="images/FLIR_video_00003A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00004.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" width="100%" src="images/FLIR_video_00004A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00005.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00005A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00006.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00006A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00007.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00007A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00008.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00008A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00009.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00009A.jpeg" />
+        </div>
+      </div>
+      <!--  -->
+      <div class="card">
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00010.jpeg" />
+        </div>
+        <div>
+          <img width="50px" src="arrow.png" />
+        </div>
+        <div class="carditem">
+          <img width="100%" src="images/FLIR_video_00010A.jpeg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goHome() {
+      location.href = "/";
+    }
+
+    function convert() {
+      console.log('convert');
+      var t = setTimeout(function () {
+        let loader = document.getElementsByClassName('loader');
+
+        console.log('loader: ', loader);
+        for (var i = 0; i < loader.length; i++) {
+          loader[i].remove();
+        }
+
+      }, 2000);
+    }
+
+    function go(path) {
+      location.href = path;
+    }
+
+
+
+    window.onload = function () {
+      console.log('on load')
+      // var spinner = new Spin.Spinner(opts).spin(document.getElementById('spinner'));
+      // var target = document.getElementById('spinner');
+      // var spinner = new Spinner().spin();
+      // target.appendChild("123");
+      // target.innerHTML = '123'
+      // var spinner = new Spin.Spinner(opts).spin(document.getElementById('spinner'));
+      // console.log(spinner);
+
+      // var spinner = new Spinner().spin();
+      // target.appendChild(spinner.el);
+      // var spinner = new Spin.Spinner(opts).spin(document.getElementById('spinner'));
+
+
+    }
+  </script>
+</body>
+
+</html>
