@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="reset.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    html,
+    body {}
+
+    .wrap {
+      margin: 0 auto;
+      width: 980px;
+      box-sizing: border-box;
+    }
+
+    .container {}
+
+    .header {
+      background-color: red;
+      text-align: center;
+      padding: 40px;
+      cursor: pointer;
+    }
+
+    .title {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main {
+      margin: 0 auto;
+      width: 660px;
+      padding-top: 80px;
+    }
+
+    .card {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      /* align-content: space-between; */
+    }
+
+    .card:not(:nth-of-type(1)) {
+      margin-top: 20px;
+    }
+
+    .carditem {
+      width: 40%;
+      height: 600px;
+      background-color: red;
+    }
+
+    .carditem:nth-of-type(1) {}
+
+
+    .main section {
+      clear: both;
+    }
+
+    .main>section>div:nth-of-type(1) {
+      float: left;
+    }
+
+    .main section>div:nth-of-type(2) {
+      /* padding-left: 20px; */
+    }
+
+    .main>section::after {
+      /* display: block;
+      content: '';
+      clear: both; */
+      clear: both;
+    }
+
+    .user {}
+
+    .user:not(:nth-of-type(1)) {
+      margin-top: 20px;
+    }
+
+    .userleft {
+      float: left;
+      display: inline-block;
+      width: 260px;
+    }
+
+    .userright {
+      display: inline-block;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header" onclick="goHome()">
+      <h2>logo</h2>
+    </div>
+    <div class="title">
+      <h2>적외선 이미지에서..</h2>
+    </div>
+    <div class="nav1">
+      <ul>
+        <li>
+          <div>
+            <a href="page1.html">프로젝트 소개</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="page2.html">동영상</a>
+          </div>
+        </li>
+        <!-- <li class="active">
+          <div>
+            <a href="page3.html">웹페이지 활용 방법</a>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <div class="main">
+      <div class="user">
+        <div class="userleft">
+          <img src="user.jpeg" />
+        </div>
+        <div class="userright">
+          <div style="border-bottom: 1px solid black; width: 100%; padding-bottom: 15px; margin-bottom: 15px;">
+            <h2 style="font-weight: bold;font-size: 24px;">홍길동</h2>
+          </div>
+          <h2 style="font-size: 19px;">소개말 입력칸 소개말 입력칸</h2>
+          <p style="padding-top: 15px; line-height: 1.69;">
+            개인 오픈소스 프로젝트도 운영해 보고 다른 프로젝트에 기여도 해봤지만 사용자가 많은 JavaScript 테스트 프레임워크인 mocha의 메인테이너로 1년간 참여하면서 새롭게 배운점을
+            들려드립니다. 작지 않은 오픈소스 프로젝트에서 메인테이너들이 프로젝트를 어떻게 관리하고 협업하는지에 대해 설명하고 mocha를 유지보수하면서 어려웠던 부분과 배운 것들을 소개하려고 합니다.
+          </p>
+        </div>
+      </div>
+      <div class="user">
+        <div class="userleft">
+          <img src="user.jpeg" />
+        </div>
+        <div class="userright">
+          <div style="border-bottom: 1px solid black; width: 100%; padding-bottom: 15px; margin-bottom: 15px;">
+            <h2 style="font-weight: bold;font-size: 24px;">홍길동</h2>
+          </div>
+          <h2 style="font-size: 19px;">소개말 입력칸 소개말 입력칸</h2>
+          <p style="padding-top: 15px; line-height: 1.69;">
+            개인 오픈소스 프로젝트도 운영해 보고 다른 프로젝트에 기여도 해봤지만 사용자가 많은 JavaScript 테스트 프레임워크인 mocha의 메인테이너로 1년간 참여하면서 새롭게 배운점을
+            들려드립니다. 작지 않은 오픈소스 프로젝트에서 메인테이너들이 프로젝트를 어떻게 관리하고 협업하는지에 대해 설명하고 mocha를 유지보수하면서 어려웠던 부분과 배운 것들을 소개하려고 합니다.
+          </p>
+        </div>
+      </div>
+      <div class="user">
+        <div class="userleft">
+          <img src="user.jpeg" />
+        </div>
+        <div class="userright">
+          <div style="border-bottom: 1px solid black; width: 100%; padding-bottom: 15px; margin-bottom: 15px;">
+            <h2 style="font-weight: bold;font-size: 24px;">홍길동</h2>
+          </div>
+          <h2 style="font-size: 19px;">소개말 입력칸 소개말 입력칸</h2>
+          <p style="padding-top: 15px; line-height: 1.69;">
+            개인 오픈소스 프로젝트도 운영해 보고 다른 프로젝트에 기여도 해봤지만 사용자가 많은 JavaScript 테스트 프레임워크인 mocha의 메인테이너로 1년간 참여하면서 새롭게 배운점을
+            들려드립니다. 작지 않은 오픈소스 프로젝트에서 메인테이너들이 프로젝트를 어떻게 관리하고 협업하는지에 대해 설명하고 mocha를 유지보수하면서 어려웠던 부분과 배운 것들을 소개하려고 합니다.
+          </p>
+        </div>
+      </div>
+      <div class="user">
+        <div class="userleft">
+          <img src="user.jpeg" />
+        </div>
+        <div class="userright">
+          <div style="border-bottom: 1px solid black; width: 100%; padding-bottom: 15px; margin-bottom: 15px;">
+            <h2 style="font-weight: bold;font-size: 24px;">홍길동</h2>
+          </div>
+          <h2 style="font-size: 19px;">소개말 입력칸 소개말 입력칸</h2>
+          <p style="padding-top: 15px; line-height: 1.69;">
+            개인 오픈소스 프로젝트도 운영해 보고 다른 프로젝트에 기여도 해봤지만 사용자가 많은 JavaScript 테스트 프레임워크인 mocha의 메인테이너로 1년간 참여하면서 새롭게 배운점을
+            들려드립니다. 작지 않은 오픈소스 프로젝트에서 메인테이너들이 프로젝트를 어떻게 관리하고 협업하는지에 대해 설명하고 mocha를 유지보수하면서 어려웠던 부분과 배운 것들을 소개하려고 합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function goHome() {
+      location.href = "/";
+    }
+  </script>
+</body>
+
+</html>
