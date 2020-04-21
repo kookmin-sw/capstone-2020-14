@@ -1,0 +1,206 @@
+/*
+Design by 
+http://www.yihaowangluo.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF url(images/img1.gif) repeat-x;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #6E697D;
+}
+
+form, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	text-transform: lowercase;
+	color: #7C6DA6;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: #4E3A85;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
+
+#header {
+	width: 526px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+#header h1 {
+	float: left;
+	padding: 30px 0 0 13px;
+	letter-spacing: -4px;
+	font-size: 3em;
+}
+
+#header h2 {
+	float: right;
+	padding: 52px 13px 0 0;
+	font-size: 1.2em;
+}
+
+#header a {
+	text-decoration: none;
+	color: #7C6DA6;
+}
+
+/* Menu */
+
+#menu {
+	width: 500px;
+	height: 50px;
+	padding: 13px 13px 0 13px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	width: 125px;
+	height: 40px;
+	padding: 10px 0 0 0;
+	background: url(images/img5.gif) no-repeat;
+	text-align: center;
+	text-transform: lowercase;
+	text-decoration: none;
+	letter-spacing: -2px;
+	font-size: 1.8em;
+	color: #FFFFFF;
+}
+
+#menu .first a {
+	background: none;
+}
+
+#menu a:hover {
+	color: #7C6DA6;
+}
+
+/* Content */
+
+#content {
+	width: 526px;
+	margin: 0 auto;
+	padding: 0;
+	background: #FFFFFF url(images/img2.gif) no-repeat;
+}
+
+/* Column One */
+
+#colOne {
+	float: left;
+	width: 280px;
+	padding: 20px 0 0 23px;
+}
+
+#colOne a {
+	border-bottom: 1px dotted #7C6DA6;
+}
+
+#colOne a:hover {
+	border: none;
+}
+
+#colOne .post {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #E6E2F1;
+}
+
+#colOne .title {
+	letter-spacing: -2px;
+	font-size: 1.6em;
+}
+
+#colOne .posted {
+	font-size: x-small;
+}
+
+#colOne .meta {
+	height: 25px;
+	padding: 10px 0 0 0;
+	background: url(images/img7.gif) no-repeat right bottom;
+}
+
+#colOne .meta p {
+	margin: 0;
+	padding: 0;
+	font-size: x-small;
+}
+
+/* Column Two */
+
+#colTwo {
+	float: right;
+	width: 180px;
+	padding: 20px 23px 0 0;
+}
+
+#textfield1 {
+	width: 145px;
+	padding: 2px 0 2px 15px;
+	background: #F3F0F9 url(images/img6.gif) no-repeat left center;
+	border: 1px solid #A69BC6;
+	color: #7C6DA6;
+}
+
+#submit1 {
+	display: none;
+}
+
+#colTwo ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#colTwo li ul, #colTwo li form {
+	margin: 0 0 10px 0;
+	padding: 10px 10px 15px 10px;
+	background: url(images/img4.gif) no-repeat left bottom;
+}
+
+#colTwo h2 {
+	height: 28px;
+	padding: 4px 0 0 10px;
+	background: url(images/img3.gif) no-repeat;
+	letter-spacing: -1px;
+	font-size: 1.2em;
+	color: #FFFFFF;
+}
+
+/* Footer */
+
+#footer {
+	width: 526px;
+	margin: 0 auto;
+	padding: 10px 0;
+	border-top: 1px solid #A396C4;
+}
+
+#footer p {
+	text-align: center;
+	font-size: x-small;
+}
