@@ -6,7 +6,9 @@
 
 ### 1.1. 프로젝트 개요
 
-최근 대두되고 있는 인공지능 기술 중 하나인 신경망을 이용한 객체 탐지(object detection)를 적외선 카메라에 적용을 하여 객체를 탐지할 것이다. 
+최근 대두되고 있는 인공지능 기술 중 하나인 신경망을 이용한 객체 탐지(object detection)를 적외선 카메라에 적용을 하여 객체를 탐지할 것이다.그러면 다음과 같이 가시광선만을 이용한 카메라로는 탐지가 어려운 상황에서도 훌륭한 성능을 보이는 것이 가능하다.
+
+![RESULT](https://user-images.githubusercontent.com/12128784/80321857-a5021500-885b-11ea-9d5b-008c8cee0b87.gif) 
 
 ### 1.2. 추진 배경 및 필요성
 
@@ -124,6 +126,7 @@ The key contributions of this project follows as:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/06iZmmjt9rY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 5. 결과 영상
+![image](https://user-images.githubusercontent.com/12128784/80321114-9d3f7200-8855-11ea-8304-e1ce9534f53d.png)
 
 ## 6. 참고 문헌
 
