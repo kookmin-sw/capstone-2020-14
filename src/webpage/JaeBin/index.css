@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  position: relative;
+  background-color: #0ccf61;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+  color: white;
+}
+
+.parent {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  font-size: 34px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.logo>a {
+  font-size: 16px;
+}
+
+/* menu */
+.menu {
+  display: none;
+}
+
+.menu>div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 4px;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 80px);
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.main::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* sidebar */
+.sidebar {
+  width: 260px;
+  height: 100%;
+  float: left;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.sidebar-main {}
+
+.sidebar-main-empty {
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sidebar-main-item {
+  padding: 10px 20px;
+  display: relative;
+  cursor: pointer;
+}
+
+.sidebar-main-item>p {
+  display: inline-block;
+  width: calc(100% - 40px - 10px);
+}
+
+.sidebar-main-item>img {
+  vertical-align: middle;
+  width: 40px;
+}
+
+.sidebar-add-btn-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.sidebar-add-btn {
+  /* width: 200px; */
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #006aff;
+  /* background-color: #0ccf61; */
+  padding: 9px 15px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.contents {
+  display: inline-block;
+  width: calc(100% - 260px);
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.contents-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 900px;
+}
+
+.contents-wrapper>h2 {
+  font-size: 52px;
+}
+
+.contents-wrapper::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.contents-item {
+  width: 800px;
+  height: 600px;
+  float: left;
+}
+
+.contents-sidebar {
+  /* background-color: lime; */
+  width: 100px;
+  display: inline-block;
+}
+
+.toggle-menu {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+  }
+
+  .menu {
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+  }
+
+  .menu>div {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 4px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    /* width: 260px; */
+    width: 0;
+    display: none;
+    position: absolute;
+    top: 50px;
+    height: calc(100% - 50px);
+    background-color: white;
+    transition: 0.5s;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .contents {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .contents-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+  }
+
+  .contents-wrapper>h2 {
+    font-size: 27px;
+  }
+
+  .contents-sidebar {
+    /* background-color: lime; */
+    width: 10%;
+    display: inline-block;
+  }
+
+  .contents-item {
+    width: 90%;
+    /* width: 40%; */
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: transparent;
+  outline: none;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
