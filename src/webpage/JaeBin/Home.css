@@ -1,0 +1,11 @@
+.modal-div {
+  padding: 20px;
+}
+
+.modal-div>div {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 10px;
+}
