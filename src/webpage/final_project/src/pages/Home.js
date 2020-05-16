@@ -347,10 +347,15 @@ class Home extends React.Component {
             <div>
               <div style={{ marginBottom: '30px' }}>
                 <DynamicLineChart
+                  playerInfo={this.state.currentVideoIndex === 0 ? this.state.player1 : this.state.player2}
+                  data={this.state.currentVideoIndex === 0 ? BASE_0 : BASE_1}
+                  dummy={this.state.dummy}
                 />
               </div>
               <div>
                 <DynamicDoughnut
+                  playerInfo={this.state.currentVideoIndex === 0 ? this.state.player1 : this.state.player2}
+                  data={this.state.currentVideoIndex === 0 ? BASE_0 : BASE_1}
                 />
               </div>
             </div>
