@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import './Home.css';
-import { BASE_0, BASE_1 } from '../constatns'
+import { BASE_0, BASE_1 } from '../constants'
 
 import { Doughnut, Bar, Line } from 'react-chartjs-2';
 import CrazyLine from '../components/CrazyLine';
