@@ -78,7 +78,11 @@ class DynamicLineChart extends Component {
     const options = {
       title: {
         text: '',
+        //Uncomment properties below to see how they behave
+        //fontColor: "red",
+        //fontSize: 30
       },
+      height: 300,
       data: [{
         type: "line",
         dataPoints: dps
