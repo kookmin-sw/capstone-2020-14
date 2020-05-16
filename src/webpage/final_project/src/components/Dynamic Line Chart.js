@@ -77,10 +77,18 @@ class DynamicLineChart extends Component {
 
     const options = {
       title: {
-        text: '',
+        text: '프레임 당 객체 수 변화추이',
         //Uncomment properties below to see how they behave
         //fontColor: "red",
         //fontSize: 30
+      },
+      axisY: {
+        minimum: 0,
+        interval: 1,
+        title: '객체 개수'
+      },
+      axisX: {
+        title: '프레임 수'
       },
       height: 300,
       data: [{
