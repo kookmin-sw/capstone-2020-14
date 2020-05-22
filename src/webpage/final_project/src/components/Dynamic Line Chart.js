@@ -90,7 +90,7 @@ class DynamicLineChart extends Component {
       axisX: {
         title: '프레임 수'
       },
-      height: 300,
+      height: 290,
       data: [{
         type: "line",
         dataPoints: dps
