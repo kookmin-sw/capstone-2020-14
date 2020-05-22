@@ -53,7 +53,7 @@ class DynamicLineChart extends Component {
     // console.log(data);
 
     let yData = data.bounding_box[yVal].label.length;
-    // console.log(data.bounding_box.length);
+    
     console.log('@@@@ 1: ', yVal);
     console.log('@@@@ 1: ', playerInfo);
 
@@ -95,7 +95,6 @@ class DynamicLineChart extends Component {
         <CanvasJSChart options={options}
           onRef={ref => this.chart = ref}
         />
-        {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
       </div>
     );
   }
