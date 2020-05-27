@@ -28,7 +28,7 @@ const getState = () => ({
     'Other Vehicle'
   ],
   datasets: [{
-    data: [0],
+    data: [0, 0, 0, 0, 0],
     backgroundColor: [
       'red',
       'yellow',
@@ -81,7 +81,7 @@ export default createReactClass({
         console.log(index);
         console.log(data.bounding_box[index].label)
 
-        let elemOne, elemTwo, elemThree = 0;
+        let elemOne, elemTwo, elemThree, elemFour, elemFive = 0;
 
         elemOne = data.bounding_box[index].label.filter((v) => v === 1);
         elemTwo = data.bounding_box[index].label.filter((v) => v === 2);
@@ -89,7 +89,7 @@ export default createReactClass({
 
         let _state = getState();
 
-        _state.datasets[0].data = [elemOne, elemThree];
+        _state.datasets[0].data = [elemOne, elemTwo, elemThree, elemFour, elemFive];
         console.log('@@@@ _staet: ', _state);
 
         this.setState(_state);
