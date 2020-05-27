@@ -52,7 +52,7 @@ class DynamicLineChart extends Component {
   updateChart(data, playerInfo) {
     // console.log(data);
 
-    let yData = data.bounding_box[yVal].label.length;
+    let yData = data.boundingbox[yVal].label.length;
     
     console.log('@@@@ 1: ', yVal);
     console.log('@@@@ 1: ', playerInfo);

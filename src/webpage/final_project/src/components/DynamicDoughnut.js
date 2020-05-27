@@ -4,6 +4,9 @@ import createReactClass from 'create-react-class';
 
 import { Doughnut } from 'react-chartjs-2';
 
+import { OBJ_MAP } from '../constants';
+
+
 let timer = null;
 let index = 0;
 
@@ -30,17 +33,17 @@ const getState = () => ({
   datasets: [{
     data: [0, 0, 0, 0, 0],
     backgroundColor: [
-      'red',
+      '#396E4D',
       'yellow',
-      'green',
-      'lime',
+      'blue',
+      'red',
       'black'
     ],
     hoverBackgroundColor: [
-      'red',
+      '#396E4D',
       'yellow',
-      'green',
-      'lime',
+      'blue',
+      'red',
       'black'
     ]
   }]
@@ -72,21 +75,34 @@ export default createReactClass({
     if (isToggle === true && playerInfo.isPlay) {
       timer = setInterval(() => {
 
-        if (index + 1 > data.bounding_box.length) {
+        if (index + 1 > data.boundingbox.length) {
           index = 0;
           clearInterval(timer);
           return;
         }
 
         console.log(index);
-        console.log(data.bounding_box[index].label)
+        console.log(data.boundingbox[index].label)
 
         let elemOne, elemTwo, elemThree, elemFour, elemFive = 0;
 
-        elemOne = data.bounding_box[index].label.filter((v) => v === 1);
-        elemTwo = data.bounding_box[index].label.filter((v) => v === 2);
-        elemThree = data.bounding_box[index].label.filter((v) => v === 3);
-
+        elemOne = data.boundingbox[index].label.filter((v) => {
+          console.log('@@@@ filter 1: ', v);
+          if ((v + 1) === 1) return true;
+        });
+        console.log('elemOne: ', elemOne);
+        elemTwo = data.boundingbox[index].label.filter((v) => (v + 1) === 2);
+        elemThree = data.boundingbox[index].label.filter((v) => (v + 1) === 3);
+        elemFour = data.boundingbox[index].label.filter((v) => (v + 1) === 18);
+        elemFive = data.boundingbox[index].label.filter((v) => {
+          console.log('@@@@ filter: ', v);
+          v = v + 1;
+          if (v !== 1 &&
+            v !== 2 &&
+            v !== 3 &&
+            v !== 18) return true;
+        });
+        
         let _state = getState();
 
         _state.datasets[0].data = [elemOne, elemTwo, elemThree, elemFour, elemFive];
