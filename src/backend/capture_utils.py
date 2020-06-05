@@ -18,7 +18,7 @@ def capture():
         with mss() as sct:
             sct.get_pixels(mon)
             img = Image.frombuffer('RGB', (sct.width, sct.height), sct.image)
-
+            # TODO: np_img 에다가 prediction 추가할 것.
             np_img = np.array(img)
             encode_return_code, image_buffer = cv2.imencode('.jpg', np_img)
             io_buf = io.BytesIO(image_buffer)
