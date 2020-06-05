@@ -2,8 +2,9 @@ __author__ = 'JudePark'
 __email__ = 'judepark@kookmin.ac.kr'
 
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response, render_template
 from flask_sqlalchemy import SQLAlchemy
+from capture_utils import capture
 
 app = Flask(__name__)
 
@@ -37,8 +38,8 @@ def create_all():
     db.create_all(app=app)
 
 @app.route('/')
-def hello():
-    return f'Hello, World!'
+def index():
+    return render_template('capture.html')
 
 
 @app.route('/user/signup', methods=['GET', 'POST'])
@@ -61,6 +62,15 @@ def sign_in():
         return jsonify({'code': 200, 'user_id': entity.id})
     else:
         return jsonify({'code': 400})
+
+
+@app.route('/video_feed')
+def video_feed():
+    """Video streaming route. Put this in the src attribute of an img tag."""
+    return Response(
+        capture(),
+        mimetype='multipart/x-mixed-replace; boundary=frame'
+    )
 
 db.init_app(app)
 app.run(host='0.0.0.0')
