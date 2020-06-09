@@ -6,7 +6,7 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 var dps = [];   //dataPoints.
 var xVal = dps.length + 1;
 var yVal = 0;
-var updateInterval = 100;
+var updateInterval = 1000;
 
 let timer = null;
 
@@ -32,8 +32,8 @@ class DynamicLineChart extends Component {
     if (playerInfo.isPlay) {
       timer = setInterval(() => this.updateChart(data, playerInfo), updateInterval);
     } else {
-      xVal = playerInfo.currentTime * 10;
-      yVal = playerInfo.currentTime * 10;
+      xVal = playerInfo.currentTime;
+      yVal = playerInfo.currentTime;
       console.log('@@@@ yVal(stop): ', yVal);
       clearInterval(timer);
     }
@@ -52,15 +52,8 @@ class DynamicLineChart extends Component {
   updateChart(data, playerInfo) {
     // console.log(data);
 
-    // yVal = yVal +  Math.round(5 + Math.random() *(-5-5));
-    if (yVal + 1 > data.bounding_box.length) {
-      if (this.chart) this.chart.render();
-      clearInterval(timer);
-      return;
-    }
-
-    let yData = data.bounding_box[yVal].label.length;
-    // console.log(data.bounding_box.length);
+    let yData = data.boundingbox[yVal].label.length;
+    
     console.log('@@@@ 1: ', yVal);
     console.log('@@@@ 1: ', playerInfo);
 
@@ -90,7 +83,7 @@ class DynamicLineChart extends Component {
       axisX: {
         title: '프레임 수'
       },
-      height: 300,
+      height: 290,
       data: [{
         type: "line",
         dataPoints: dps
@@ -102,7 +95,6 @@ class DynamicLineChart extends Component {
         <CanvasJSChart options={options}
           onRef={ref => this.chart = ref}
         />
-        {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
       </div>
     );
   }
