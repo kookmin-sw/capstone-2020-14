@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>yolo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <style type="text/css">
+    * { font-family: 'Noto Sans KR', sans-serif; }
+    body { margin: 0; padding: 0; }
+    #page-content { display: flex; flex: 1; background-color: #e3e3e3; }
+    #content { flex: 1; display: flex; }
+    #proj-name { font-size: 36px; margin-bottom: 36px; color: #6c6c6c; }
+    #proj-name span { color: #0ccf61; }
+    #video-container { background: #fff; border: 1px solid #e9e9e9; padding: 36px; margin-bottom: 48px; width: 480px; }
+    .y-record { margin-top: 16px; width: 100%; background: #0ccf61; border: none; font-size: 16px; color: #fff; height: 40px; outline: 0; }
+  </style>
+</head>
+<body>
+  <div id="page-content">
+    <main id="content" style="align-items: center; flex-direction: column; padding: 72px 0;">
+      <div id="proj-name"><span>Y</span>ou <span>O</span>nly <span>L</span>ive <span>O</span>nce</div>
+      <section id="video-container">
+        <div style="line-height: 38px; background: #666; color: #fff; font-size: 14px; text-align: center;">디바이스 목록</div>
+        <div id="device-container" style="border: 1px solid #666;">
+          <div class="device-list" style="display: flex; justify-content: center; align-items: center; padding: 12px;">
+            <img id="camera" height="60px">
+            <div style="flex: 1; margin-left: 16px; font-size: 20px;">Seek Shot Pro</div>
+          </div>
+          <!-- <button class="btn-add-device" style="width: 100%;">디바이스 추가</button> -->
+        </div>
+        <br>
+        <div class="video-container" onclick="updateChart(case1)">
+          <div style="line-height: 38px; background: #666; color: #fff; font-size: 14px; text-align: center;">Case 1</div>
+          <img id='case1' width="100%" src="{{ url_for('video_feed') }}">
+          <!-- <video id="case1" width="100%" controls=""><source src="./assets/videos/base0.mp4" type="video/mp4"></video> -->
+        </div>
+        <button class="y-record"><a href="http://localhost:5000/record">녹화본</a></button>
+        <br>
+        
+        <br>
+        <section id="chart-container">
+          <canvas id="lineChart" style="position: relative; height: 250px; width: 100%;"></canvas>
+          <br>
+          <canvas id="doughnutChart" style="position: relative; height: 250px; width: 100%;"></canvas>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var objectTypeByFrame = {
+      person: 1,
+      car: 1,
+      bicycle: 1,
+      dog: 1,
+      others: 1
+    };
+
+    var case1 = {
+      label: '프레임 당 객체 수 변화 추이 (Case 1)',
+      objectsByFrame: [0, 1, 0, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 2, 1],
+    };
+
+    var case2 = {
+      label: '프레임 당 객체 수 변화 추이 (Case 2)',
+      objectsByFrame: [0, 1, 0, 1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 2, 1],
+      
+    };
+
+    var lineChartCtx = document.getElementById('lineChart').getContext('2d');
+    var doughnutChartCtx = document.getElementById('doughnutChart').getContext('2d');
+
+    var lineChart = new Chart(lineChartCtx, {
+        type: 'line',
+        height: '50',
+        responsive: true,
+        data: {
+            labels: case1.objectsByFrame.map((el, index) => index),
+            datasets: [{
+                label: '프레임 당 객체 수 변화 추이',
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        precision: 0
+                    }
+                }]
+            }
+        }
+    });
+
+    var doughnutChart = new Chart(doughnutChartCtx, {
+        type: 'doughnut',
+        height: '50',
+        responsive: true,
+        data: {
+          datasets: [{
+            data: Object.values(objectTypeByFrame),
+            backgroundColor: ['#23e9cd', '#e9cd23', '#e923cd', '#cde923', '#2923cd']
+          }],
+          labels: Object.keys(objectTypeByFrame)
+        },
+    });
+
+    function streamDoughnut(data) {
+      // see DynamicDoughnut.js 
+      doughnutChart.data.datasets[0].data = doughnutStreamData;
+      doughnutChart.update();
+    }
+
+    function updateChart(data) {
+      lineChart.data.datasets[0].label = data.label;
+      lineChart.data.datasets[0].data = data.objectsByFrame;
+      lineChart.update();
+    }
+  </script>
+</body>
+</html>

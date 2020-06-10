@@ -8,11 +8,6 @@ from PIL import Image
 import numpy as np
 import io
 import cv2
-
-
-
-
-
 import os
 import time
 import glob
@@ -24,21 +19,20 @@ import argparse
 from tqdm import tqdm
 import copy
 
-
+from flask import Flask
+from flask_mail import Mail, Message
+from matplotlib import pyplot as plt
 
 
 # TODO => 비디오 화면에 맞춰서 수정할 것.
 mon = {'top': 297, 'left': 224, 'width': 590, 'height': 450}
 
 
-def capture():
-
+def capture(app, mail):
     save_path = "RealTimeTest/"
     GPU = '0'
     Model_path = 'efficientdet-d0.h5'
     phi = 0
-
-
 
     json_dict = {}
     json_dict["boundingbox"] = []
@@ -70,10 +64,7 @@ def capture():
     mon = {'top': 297, 'left': 224, 'width': 590, 'height': 450}
     sct = mss()
     image_num = 0
-
-
-
-
+    before_object_num = 0
     while True:
         with mss() as sct:
             sct.get_pixels(mon)
@@ -98,7 +89,7 @@ def capture():
             boxes = boxes[indices]
             labels = labels[indices]
             # file_name = image_path.split('/')[-1]
-            # cv2.imwrite(args.save_path +'/' + file_name, src_image)
+            # cv2.imwrite('prediction.png', src_image)
 
             temp_dict = {}
             temp_dict["box"] = boxes[indices].tolist()
@@ -109,15 +100,9 @@ def capture():
 
             draw_boxes(src_image, boxes, scores, labels, colors, classes)
 
-
-
-
-#             if cv2.waitKey(25) & 0xFF == ord('q'):
-# #                cv2.destroyAllWindows()
-#                 break
-
             np_img = np.array(src_image)
             encode_return_code, image_buffer = cv2.imencode('.jpg', np_img)
             io_buf = io.BytesIO(image_buffer)
+
             yield (b'--frame\r\n'
                    b'Content-Type: image/png\r\n\r\n' + io_buf.read() + b'\r\n')
