@@ -1,10 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>HOME</title>
+  <title>RECORD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <style type="text/css">
+    * { font-family: 'Noto Sans KR', sans-serif; }
+    body { margin: 0; padding: 0; }
+    #page-content { display: flex; flex: 1; background-color: #e3e3e3; }
+    #content { flex: 1; display: flex; }
+    #proj-name { font-size: 36px; margin-bottom: 36px; color: #6c6c6c; }
+    #proj-name span { color: #0ccf61; }
+    #video-container { background: #fff; border: 1px solid #e9e9e9; padding: 36px; margin-bottom: 48px; width: 480px; }
+    .y-record { margin-top: 16px; width: 100%; background: #0ccf61; border: none; font-size: 16px; color: #fff; height: 40px; outline: 0; }
+  </style>
 </head>
-<body>
-    Sample
+
+
+
+
+<body onload="showImage()">
+  <div id="page-content">
+    <main id="content" style="align-items: center; flex-direction: column; padding: 72px 0;">
+      <div id="proj-name"><span>Y</span>ou <span>O</span>nly <span>L</span>ive <span>O</span>nce</div>
+      <section id="video-container">
+        <br>
+          <form>
+              <input type='button' 
+                    value='CLICK' 
+                    onclick='covert_image()'>
+          </form>        
+        <div class="video-container">
+          <div style="line-height: 38px; background: #666; color: #fff; font-size: 14px; text-align: center;">VIDEO</div>
+
+          <img id='case1' width="100%">
+          <img id='mini1' width="20%" src="RECORD/bird/Original/00000.png", onclick= 'convert_img_kind(0)'>
+          <img id='mini2' width="20%" src="RECORD/home/Original/00000.png", onclick= 'convert_img_kind(2)'>
+          <img id='mini3' width="20%" src="RECORD/laboratory/Original/00000.png", onclick= 'convert_img_kind(1)'>
+          <div style="line-height: 38px; background: #666; color: #fff; font-size: 14px; text-align: center;">GRAPH</div>
+          <img id='graph' width="100%">
+
+
+          <!-- <video id="case1" width="100%" controls=""><source src="./assets/videos/base0.mp4" type="video/mp4"></video> -->
+        </div>
+
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+
+
+    function streamDoughnut(data) {
+      // see DynamicDoughnut.js 
+      doughnutChart.data.datasets[0].data = doughnutStreamData;
+      doughnutChart.update();
+    }
+
+
+    var imgArray=new Array(); 
+    var imgArray_infer = new Array();
+    var graphArray = new Array();
+    var names = ["bird", "laboratory", "home"];
+    var length = [524, 516, 520]
+    console.log(names)
+    for(j=0; j < 3; j++){
+      imgArray[j] = new Array();
+      imgArray_infer[j] = new Array();
+      graphArray[j] = new Array();
+      for(i=0; i<length[j];i++){
+          if(i < 10){
+              imgArray[j][i] = "RECORD/" + String(names[j]) + "/Original/0000" + String(i) + ".png"
+              imgArray_infer[j][i] = "RECORD/" + String(names[j]) + "/Detect/0000" + String(i) + ".png"
+              graphArray[j][i] = "RECORD/" + String(names[j]) + "/graph/0000" + String(i) + ".png"
+          }
+          else if(i < 100){
+              imgArray[j][i] = "RECORD/" + String(names[j]) + "/Original/000" + String(i) + ".png"
+              imgArray_infer[j][i] = "RECORD/" + String(names[j]) + "/Detect/000" + String(i) + ".png"
+              graphArray[j][i] = "RECORD/" + String(names[j]) + "/graph/000" + String(i) + ".png"
+          }
+          else{
+              imgArray[j][i] = "RECORD/" + String(names[j]) + "/Original/00" + String(i) + ".png"
+              imgArray_infer[j][i] = "RECORD/" + String(names[j]) + "/Detect/00" + String(i) + ".png"
+              graphArray[j][i] = "RECORD/" + String(names[j]) + "/graph/00" + String(i) + ".png"
+          }
+      }
+    }
+    console.log(graphArray[0][0])
+    var img_sort = 0
+    var imgNum = 0
+    var Is_inferenced = false
+    function showImage(){
+        var objImg=document.getElementById("case1");
+        var objGraph = document.getElementById("graph")
+        objGraph.src= graphArray[img_sort][imgNum%length[img_sort]]; 
+        if (Is_inferenced){
+            objImg.src=imgArray_infer[img_sort][imgNum%length[img_sort]]; 
+        }
+        else{
+            objImg.src=imgArray[img_sort][imgNum%length[img_sort]]; 
+        }
+        setTimeout(showImage,100); 
+        imgNum+=1
+    }
+    function covert_image(){
+        Is_inferenced ? Is_inferenced = false : Is_inferenced=true
+    }
+    function convert_img_kind(num){
+      imgNum=0
+      console.log(img_sort)
+      img_sort = parseInt(num)
+      console.log(img_sort)
+    }
+
+
+  </script>
 </body>
 </html>
