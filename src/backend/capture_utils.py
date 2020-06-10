@@ -10,7 +10,7 @@ import io
 import cv2
 
 # TODO => 비디오 화면에 맞춰서 수정할 것.
-mon = {'top': 160, 'left': 160, 'width': 100, 'height': 100}
+mon = {'top': 297, 'left': 224, 'width': 590, 'height': 450}
 
 
 def capture():
