@@ -8,6 +8,9 @@ import glob
 from model import efficientdet
 from utils import preprocess_image, postprocess_boxes
 from utils.draw_boxes import draw_boxes
+import argparse
+from tqdm import tqdm
+import copy
 
 
 # +
@@ -84,7 +87,6 @@ def main():
         boxes = boxes[indices]
         labels = labels[indices]
         file_name = image_path.split('/')[-1]
-        cv2.imwrite(args.save_path +'/' + file_name, src_image)
 
         temp_dict = {}
         temp_dict["box"] = boxes[indices].tolist()
@@ -93,6 +95,7 @@ def main():
         temp_dict["image_name"] = file_name
         json_dict["boundingbox"].append(copy.deepcopy(temp_dict))
         draw_boxes(src_image, boxes, scores, labels, colors, classes)
+        cv2.imwrite(args.save_path +'/' + file_name, src_image)
 
 #         cv2.waitKey(0)
     print("time : ", time.time()-start)
