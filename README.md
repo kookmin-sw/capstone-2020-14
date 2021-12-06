@@ -126,7 +126,6 @@ The key contributions of this project follows as:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/06iZmmjt9rY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 5. 결과 영상
-![image](https://user-images.githubusercontent.com/12128784/80321114-9d3f7200-8855-11ea-8304-e1ce9534f53d.png)
-
+<img src="https://user-images.githubusercontent.com/12128784/144799315-dbea0a0d-ef17-4318-8d71-9effb20c2c45.gif" alt="lab" style="zoom:150%;" />
 ## 6. 참고 문헌
 
